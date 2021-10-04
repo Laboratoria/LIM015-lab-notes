@@ -16,7 +16,7 @@
 
 Hoy en día no es práctico imaginar el desarrollo web sin HTML, CSS y JavaScript,
 esta última es el alma del desarrollo de aplicaciones web.
-[React](https://reactjs.org/), [Angular](https://angular.io/) y [Vue](https://vuejs.org/)
+[React](https://reactjs.org/) y [Vue](https://vuejs.org/)
 son algunos de los _frameworks_ y _librerías_ de JavaScript más utilizados por
 lxs desarrolladorxs alrededor del mundo, y hay una razón para eso.
 En el contexto del navegador, [_mantener la interfaz sincronizada con el estado
@@ -92,7 +92,7 @@ aunque no serán los únicos archivos que quizás tendrás que crear.
 * `.eslintrc` este archivo contiene reglas para formatear el código además de
   ser una buena practica tener configurado un linter.
 
-## 3. Objetivo de Aprendizaje
+## 3. Objetivos de Aprendizaje
 
 El objetivo principal de es aprender a construir una _interfaz web_ usando
 el _framework_ elegido. Todos estos frameworks de Frontend atacan el mismo
@@ -102,7 +102,7 @@ cómo cada cambio sobre el estado se va a ir reflejando en la interfaz (por
 ejemplo, cada vez que agregamos una _nota_, la interfaz debe actualizar la lista
 de notas).
 
-![Framewoks-img](https://miro.medium.com/max/700/1*paPkmhDhXifPg-64om52og.jpeg)
+![Framewoks-img](https://miro.medium.com/max/1400/1*WRzDZndJCduHwqgOpWmbhQ.png)
 
 ### HTML y CSS
 
@@ -129,17 +129,6 @@ de notas).
 * [ ] Refs
 * [ ] [`Component Lifecycle`](https://es.reactjs.org/docs/hooks-effect.html)
 * [ ] [`React Router`](https://reacttraining.com/react-router/web)
-
-### Angular
-
-* [ ] [`Uso de Components | Templates`](https://angular.io/guide/architecture-components#introduction-to-components)
-* [ ] [`Directivas estructurales (ngIf / ngFor)`](https://angular.io/guide/template-syntax#built-in-structural-directives)
-* [ ] [`@Input | @Ouput`](https://angular.io/guide/component-interaction#component-interaction)
-* [ ] [`Creación y uso de servicios`](https://angular.io/guide/architecture-services#providing-services)
-* [ ] [`Manejos de rutas`](https://angular.io/guide/router)
-* [ ] [`Uso de Observables`](https://angular.io/guide/observables-in-angular)
-* [ ] [`Uso de HttpClient`](https://angular.io/guide/http)
-* [ ] [`Estilos de componentes (ngStyle / ngClass)`](https://angular.io/guide/template-syntax#built-in-directives)
 
 ### Vue
 
@@ -271,7 +260,6 @@ pasarte a esta sección.
 ### Frameworks / libraries
 
 * [React](https://reactjs.org/)
-* [Angular](https://angular.io/)
 * [Vue](https://es.vuejs.org/index.html)
 
 ### Herramientas
