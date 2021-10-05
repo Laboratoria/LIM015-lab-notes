@@ -60,8 +60,7 @@ de Laboratoria para implementar la idea, por lo cual te invitamos a colaborar.
 
 ![Shows CRUD functionalities](https://raw.githubusercontent.com/florenciasilva/lab-notes/master/demo-crud.gif?token=AGJBHNTVAQRWOVF2IGMP6FK5NVFAS)
 
-Para este proyecto necesitas crear una Web App con `cualquier librería o
-framework de JavaScript` y `Firebase`.
+Para este proyecto necesitas crear una Web App con `VUE o REACT JS` y `Firebase`.
 
 Si bien la temática es libre, tu aplicación tendrá que tener ciertas
 funcionalidades básicas:
@@ -95,7 +94,7 @@ aunque no serán los únicos archivos que quizás tendrás que crear.
 ## 3. Objetivos de Aprendizaje
 
 El objetivo principal de es aprender a construir una _interfaz web_ usando
-el _framework_ elegido. Todos estos frameworks de Frontend atacan el mismo
+el _framework_ o la _libreria_ elegida. Todos estos frameworks de Frontend atacan el mismo
 problema: **cómo mantener la interfaz y el estado sincronizados**. Así que esta
 experiencia espera familiarizarte con el concepto de _estado de pantalla_, y
 cómo cada cambio sobre el estado se va a ir reflejando en la interfaz (por
@@ -171,9 +170,6 @@ de notas).
 
 * Este proyecto se debe "resolver" de forma individual.
 
-* La duración propuesta del proyecto es 4 sprints, con una duración de unasemana
-  cada uno.
-
 * Trabaja en una historia hasta terminarla antes de pasar a la siguiente.
 
 * La aplicación debe ser un _Single Page App_. Las notas serán realizadas desde
@@ -195,24 +191,29 @@ que es el resultado de su trabajo colaborativo.
 
   
 ~~~
-**[Historia de usuario 1]** Usuaria/o debería poder tomar nota
+**[Historia de usuario 1]** Usuaria/o debería poder iniciar sesión
+
+Yo como usuaria quiero ingresar a lab-notes con mi cuenta de correo.   
+~~~
+~~~
+**[Historia de usuario 2]** Usuaria/o debería poder tomar nota
 
 Yo como usuaria de lab-notes quiero tomar nota para no depender de mi mala
 memoria y tener presente en todo momento los apuntes ó cosas importantes que
 antes escribía en papel.   
 ~~~
 ~~~
-**[Historia de usuario 2]** Usuaria/o debería poder ver las notas
+**[Historia de usuario 3]** Usuaria/o debería poder ver las notas
 
 Yo como usuaria de lab-notes quiero leer mis notas para recordar lo que escribí antes.  
 ~~~
 ~~~
-**[Historia de usuario 3]** Usuaria/o debería poder editar las notas
+**[Historia de usuario 4]** Usuaria/o debería poder editar las notas
 
 Yo como usuaria de lab-notes quiero editar notas para poder modificar lo que escribí antes.  
 ~~~
 ~~~
-**[Historia de usuario 4]** Usuaria/o debería poder borrar notas
+**[Historia de usuario 5]** Usuaria/o debería poder borrar notas
 
 Yo como usuaria de lab-notes quiero borrar una nota para no volver a verla.  
 ~~~  
