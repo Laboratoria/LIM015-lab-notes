@@ -1,5 +1,5 @@
 # Lab Notes : my Vision Board ✌️😜🎯
-
+![img](https://raw.githubusercontent.com/mysticBel/LIM015-lab-notes/main/my-vision-board/public/visionboard-img-1.jpg)
 
 
 ## Índice
