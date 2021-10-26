@@ -1,0 +1,82 @@
+.sectionFormRegister {
+  background-color: #d2d2f7;
+  width: 30%;
+  height: 380px;
+  border-radius: 15px;
+  margin-right: 20%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.RegisterNow {
+  margin-top: -35%;
+  /* margin-bottom: 5%; */
+  color: rgb(94, 93, 93);
+  font-size: 2.3em;
+}
+
+.inputForm {
+  /* margin-top: 50%; */
+  border-radius: 15px;
+  border: solid #736F6F;
+  font-size: 15px;
+  width:80%;
+  height: 30px;
+  margin-bottom: 3%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;  */
+  align-items: center;
+}
+
+.label { 
+  width: 68%;
+  font-weight: bold;
+  color: #736F6F;
+  margin-left: -10%;;
+}
+
+.logo {
+  width: 110%;
+  margin-top: -25%;
+  margin-left: 15%;
+}
+
+.logoAndForm {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.formRegister {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sectionButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonRegister {
+  border-radius: 12px;
+  width: 30%;
+  height: 30px;
+  border: none;
+  background-color: #9D9DD6;
+  color: aliceblue;
+  font-size: 0.8em;
+  font-weight: bold;
+  /* display: flex;
+  justify-content: center; */
+}
