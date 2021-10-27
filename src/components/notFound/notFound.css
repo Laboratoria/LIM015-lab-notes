@@ -1,0 +1,29 @@
+.contentError{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sectionError{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.contentImgError {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonError {
+  margin-top: -2%;
+  width: 10%;
+  border-radius: 12px;
+  height: 32px;
+  border: none;
+  font-size: 1.2em;
+  background-color: #6969a8;
+  color: aliceblue;
+  font-weight: bold;
+}
