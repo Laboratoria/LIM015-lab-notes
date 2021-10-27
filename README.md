@@ -49,7 +49,7 @@ Hoy en día las personas contamos con algún dispositivo móvil o
 laptop y además nos estamos preocupando por implementar acciones para
 salvar el medio ambiente, además el uso de notas en el trabajo remoto se vuelve
 indispensable para aquello que debemos apuntar en el día con día, por ello a una
-Laboratorian se le ocurre la idea de tener una herramienta como una web app para tomar notas, 
+Laboratorian se le ocurre la idea de tener una herramienta como una web app para tomar notas,
 que nos permita crear, editar, eliminar y consultar las notas en cualquier
 momento.
 
@@ -84,7 +84,7 @@ El proyecto deberá contener los siguientes archivos base de configuración,
 aunque no serán los únicos archivos que quizás tendrás que crear.
 
 * `README.md` es donde se encontrará la descripción del proyecto y elementos
-  relevantes de tu proyecto.  
+  relevantes de tu proyecto.
 * `.editorconfig` este archivo contiene la configuración para editores de texto.
 * `.gitignore`  este archivo contiene reglas para ignorar `node_modules` u otras
   carpetas que no deban incluirse en control de versiones (`git`).
@@ -113,45 +113,6 @@ de notas).
 
 * [ ] Componentes
 * [ ] Manejo de estado
-
-### React
-
-* [ ] ¿Qué es React?
-* [ ] Virtual DOM
-* [ ] ReactDOM rendering
-* [ ] [`¿Qué es un componente de React?`](https://es.reactjs.org/docs/components-and-props.html)
-* [ ] [`JSX`](https://es.reactjs.org/docs/introducing-jsx.html)
-* [ ] Props
-* [ ] Renderizado condicional (?)
-* [ ] State(ej: `this.state`, `useState`,`context`, `redux`, ...)
-* [ ] [`Manejo de eventos`](https://es.reactjs.org/docs/handling-events.html)
-* [ ] Refs
-* [ ] [`Component Lifecycle`](https://es.reactjs.org/docs/hooks-effect.html)
-* [ ] [`React Router`](https://reacttraining.com/react-router/web)
-
-### Vue
-
-* [ ] [`Instancia de Vue.js`](https://es.vuejs.org/v2/guide/instance.html)
-* [ ] [`Datos y métodos`](https://es.vuejs.org/v2/guide/instance.html#Datos-y-Metodos)
-* [ ] [`Uso y creación de Componentes`](https://vuejs.org/v2/guide/components.html)
-* [ ] [`Props`](https://es.vuejs.org/v2/guide/components.html#Pasando-datos-a-componentes-secundarios-con-Props)
-* [ ] Directivas ([v-bind](https://es.vuejs.org/v2/api/#v-bind) | [v-model](https://es.vuejs.org/v2/guide/forms.html))
-* [ ] Renderizado condicional ([v-if](https://es.vuejs.org/v2/guide/conditional.html#v-if)
-      | [v-else](https://es.vuejs.org/v2/guide/conditional.html#v-else))
-* [ ] Iteraciones ([v-for](https://es.vuejs.org/v2/guide/list.html#Mapeando-una-matriz-a-elementos-con-v-for))
-* [ ] Eventos ([v-on](https://es.vuejs.org/v2/guide/events.html))
-* [ ] [`Propiedades Computadas y Observadores`](https://es.vuejs.org/v2/guide/computed.html)
-* [ ] [`Router`](https://router.vuejs.org/guide/#html)
-* [ ] [`Clases y Estilos`](https://es.vuejs.org/v2/guide/class-and-style.html)
-* [ ] [`Gestión de Estado`](https://es.vuejs.org/v2/guide/state-management.html#Gestion-de-estado-simple-desde-cero)
-
-### Firebase
-
-* [ ] [`Firestore`](https://firebase.google.com/docs/firestore?hl=es)
-* [ ] [`Firebase Auth`](https://firebase.google.com/docs/auth?hl=es)
-* [ ] [`Firebase security rules`](https://firebase.google.com/docs/firestore/security/get-started)
-* [ ] [`onSnapshot`](https://firebase.google.com/docs/firestore/query-data/listen)
-* [ ] [`onAuthStateChanged`](https://firebase.google.com/docs/auth/web/manage-users?hl=es)
 
 ### Testing
 
@@ -189,34 +150,34 @@ etc.
 La [_Product Owner_](https://youtu.be/r2hU7MVIzxs) nos presenta este _backlog_
 que es el resultado de su trabajo colaborativo.
 
-  
+
 ~~~
 **[Historia de usuario 1]** Usuaria/o debería poder iniciar sesión
 
-Yo como usuaria quiero ingresar a lab-notes con mi cuenta de correo.   
+Yo como usuaria quiero ingresar a lab-notes con mi cuenta de correo.
 ~~~
 ~~~
 **[Historia de usuario 2]** Usuaria/o debería poder tomar nota
 
 Yo como usuaria de lab-notes quiero tomar nota para no depender de mi mala
 memoria y tener presente en todo momento los apuntes ó cosas importantes que
-antes escribía en papel.   
+antes escribía en papel.
 ~~~
 ~~~
 **[Historia de usuario 3]** Usuaria/o debería poder ver las notas
 
-Yo como usuaria de lab-notes quiero leer mis notas para recordar lo que escribí antes.  
+Yo como usuaria de lab-notes quiero leer mis notas para recordar lo que escribí antes.
 ~~~
 ~~~
 **[Historia de usuario 4]** Usuaria/o debería poder editar las notas
 
-Yo como usuaria de lab-notes quiero editar notas para poder modificar lo que escribí antes.  
+Yo como usuaria de lab-notes quiero editar notas para poder modificar lo que escribí antes.
 ~~~
 ~~~
 **[Historia de usuario 5]** Usuaria/o debería poder borrar notas
 
-Yo como usuaria de lab-notes quiero borrar una nota para no volver a verla.  
-~~~  
+Yo como usuaria de lab-notes quiero borrar una nota para no volver a verla.
+~~~
 
 ##### Criterios de aceptación
 
@@ -268,7 +229,7 @@ pasarte a esta sección.
 * [npm-scripts](https://docs.npmjs.com/misc/scripts)
 * [Babel](https://babeljs.io/)
 * [webpack](https://webpack.js.org/)
-  
+
 
 ### PWA
 
@@ -277,7 +238,7 @@ pasarte a esta sección.
 * [offlinefirst.org](http://offlinefirst.org/)
 * [Usando Service Workers - MDN](https://developer.mozilla.org/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 * [Cómo habilitar datos sin conexión - Firebase Docs](https://firebase.google.com/docs/firestore/manage-data/enable-offline?hl=es-419)
-  
+
 ### Otros recursos
 
 * [create-react-app](https://create-react-app.dev/docs/getting-started)
