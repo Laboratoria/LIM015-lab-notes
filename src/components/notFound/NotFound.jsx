@@ -1,8 +1,18 @@
 import React from "react";
-
+import error from "../../img/error404-03.png";
+import '../notFound/notFound.css'
 const NotFound = () => {
   return (
-    <h1>Error 404</h1>
+    <section className='contentError'>
+    <section className='sectionError'>
+        <figure className='contentImgError' >
+      <img src={error} alt="" />
+        </figure>
+        <section className='sectionButton'>
+          <button className='buttonError'>Inicio</button>
+        </section>
+      </section>
+    </section>
   );
 };
 
