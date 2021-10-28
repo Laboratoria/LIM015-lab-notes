@@ -1,0 +1,52 @@
+.content {
+  width: 80%;
+  margin-left: 15%;
+  margin-top: 10%;
+}
+
+.contenteInputTitle {
+  width: 35%;
+  height: 80px;
+  background-color: #C4C4C4;
+  font-size: 1.2em;
+  border-radius: 15px;
+  border: none;
+}
+
+.notasTitle {
+  width: 35%;
+  height: 60px;
+  background-color: #C4C4C4;
+  font-size: 1.2em;
+  border-radius: 15px;
+  border: none;
+  text-align: left;
+  margin-top: 3%;
+  margin-left: 3%;
+  font-weight: bold;
+}
+
+.ContentTextArea{
+  margin-top: -2%;
+  width: 35%;
+  height: 250px;
+  font-size: 1.5em;
+  background-color: #C4C4C4;
+  border-radius: 15px;
+  border: none;
+}
+
+.notasTextArea {
+  width: 90%;
+  height: 230px;
+  font-size: 1em;
+  background-color: #C4C4C4;
+  border-radius: 15px;
+  border: none;
+  text-align: left;
+  margin-left: 3%;
+}
+
+*:focus {
+    outline: 0;
+}
