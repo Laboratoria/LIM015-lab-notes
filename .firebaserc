@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bitzy-notes": {
+      "hosting": {
+        "bitzy-notes": [
+          "bitzy-notes"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bitzy-notes"
+  }
+}
