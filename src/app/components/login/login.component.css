@@ -1,0 +1,33 @@
+.logo-home{
+  height: 35vh;
+}
+
+/* .form-control-inline {
+  min-width: 0;
+  width: 400px !important;
+} */
+
+.text{
+  color: var(--color-main);
+  font-family: var( --font-main);
+}
+
+.borderInput{
+  border: 3px solid var(--color-main)!important;
+  background-color: var(--color-light) !important;
+}
+
+.btn{
+  font-family: var( --font-main);
+}
+
+.btnGoogle{
+  background-color:  var(--color-main)!important;
+}
+/* .google{
+  margin-left: 10px;
+} */
+
+.googleIcon{
+  height: 15px;
+}

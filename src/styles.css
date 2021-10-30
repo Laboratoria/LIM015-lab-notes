@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+  --color-main: #25326A;
+  --color-secundary: #4D6FFF;
+  --color-light: #F0F8FF;
+  --font-main:  'Aladin', cursive;
+  /* --font-main: 'Arvo', serif;
+  --font-secondary: 'Roboto Mono', monospace; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* font-size: 12px; */
+}
