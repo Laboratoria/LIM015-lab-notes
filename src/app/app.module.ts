@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Components
 import { AppComponent } from './app.component';
+import { LoginComponent } from './components/login/login.component';
 // import { environment } from '../environments/environment'; //FIREBASE
 
 //Version nueva
@@ -20,7 +21,8 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
 
