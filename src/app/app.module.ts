@@ -2,12 +2,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 // Components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
-// import { environment } from '../environments/environment'; //FIREBASE
+
+import { environment } from '../environments/environment'; //FIREBASE
 
 //Version nueva
 // import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -16,7 +18,8 @@ import { HomeComponent } from './components/home/home.component';
 // import { provideStorage,getStorage } from '@angular/fire/storage';
 
 // Version anterior
-// import { AngularFireModule } from '@angular/fire/compat'; //FIREBASE
+import { AngularFireModule } from '@angular/fire/compat';
+import { RegistrationComponent } from './components/registration/registration.component'; //FIREBASE
 // import { AngularFirestoreModule } from '@angular/fire/compat/firestore'; //FIREBASE
 
 
@@ -24,13 +27,15 @@ import { HomeComponent } from './components/home/home.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    RegistrationComponent
   ],
   imports: [
 
     BrowserModule,
     AppRoutingModule,
-    // AngularFireModule.initializeApp(environment.firebase), //FIREBASE
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase), //FIREBASE
     // AngularFirestoreModule, //FIREBASE
 
     /*
