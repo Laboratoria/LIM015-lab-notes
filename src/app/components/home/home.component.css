@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  /* padding: 0; */
+}
+header{
+  background-color: var(--color-main);
+  height: 10vh;
+  font-family: var(--font-main);
+  color: white;
+}
+.logo{
+  height: 7vh;
+  margin-left: 2.5vh !important;
+}
+.navbar-brand{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+.fa-bars{
+  color: white;
+  font-size: 30px;
+}
+.navbar-nav{
+  align-items: center;
+  background-color: var(--color-main);
+}
+a {
+  color: white;
+  margin-right: 1rem;
+}
+.nav-link:hover{
+  color:  var(--color-secundary);
+}
+.nav-link:focus, .nav-link:hover {
+  color: var(--color-secundary);
+}
+.navbar-expand-lg .navbar-collapse{
+  justify-content: flex-end;
+}
+
+body{
+  height: 85vh;
+}
+
+footer{
+  background-color: var(--color-main);
+  font-family: var(--font-main);
+  color: white;
+  height: 5vh;
+}
