@@ -21,7 +21,7 @@ header{
 }
 .fa-bars{
   color: white;
-  font-size: 30px;
+  /* font-size: 30px; */
 }
 .navbar-nav{
   align-items: center;
@@ -30,6 +30,7 @@ header{
 a {
   color: white;
   margin-right: 1rem;
+  cursor: pointer;
 }
 .nav-link:hover{
   color:  var(--color-secundary);

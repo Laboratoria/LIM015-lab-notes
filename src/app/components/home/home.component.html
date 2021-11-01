@@ -4,15 +4,15 @@
         class="logo mx-auto d-block"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
       aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-bars fs-2"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link fs-3">My Notes</a>  <!--  href="/Notes" -->
+          <a class="nav-link fs-4">My Notes</a>  <!--  href="/Notes" -->
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-3" routerLink="/Home">Log out</a>
+          <a class="nav-link fs-4" (click)="logOut()">Log out</a> <!--routerLink="/Home" -->
         </li>
       </ul>
     </div>
