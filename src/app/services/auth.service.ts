@@ -73,12 +73,12 @@ export class AuthService {
 
   register(email:string, password:string){
     return this.afAuth.createUserWithEmailAndPassword(email, password)
-    .then((result) => {
-      console.log(result.user);
-      this.router.navigate(['/login']);
-    }).catch((error) => {
-      console.log(error.message)
-    })
+    // .then((result) => {
+    //   console.log(result);
+    //   this.router.navigate(['/login']);
+    // }).catch((error) => {
+    //   console.log(error.message)
+    // })
   }
 
   // getUserActive(){
@@ -89,5 +89,21 @@ export class AuthService {
     this.afAuth.signOut().then(() => {
       this.router.navigate(['/login']);
   });
+  }
+
+  userlogged(){
+    return this.afAuth.onAuthStateChanged((user) =>{
+      if(user){
+        this.router.navigate(['/home'])
+      }
+    });
+  }
+
+  userNotLogged(){
+    return this.afAuth.onAuthStateChanged((user) =>{
+      if(!user){
+        this.router.navigate(['/login'])
+      }
+    })
   }
 }
