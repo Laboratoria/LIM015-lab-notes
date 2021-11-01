@@ -8,17 +8,17 @@
 <!-- <h2 class="text-center fs-1"> Bitzy Notes</h2> -->
 
 <section class="row mx-auto container">
-  <section class="col-sm-4 mx-auto d-block mt-3">
+  <section class="col-sm-8 mx-auto d-block mt-3">
 
     <form class="col form-group">
       <div class="form-group">
         <label for="exampleInputEmail1" class="text fs-5">Email address</label>
-        <input type="email" class="form-control mb-3 border border-secondary rounded-pill borderInput"
+        <input type="email" class="form-control mb-3 border border-secondary rounded-pill borderInput" autocomplete="on"
           id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="user.email" name="email">
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1" class="fs-5 text">Password</label>
-        <input type="password" class="form-control mb-3 border border-secondary rounded-pill borderInput"
+        <input type="password" class="form-control mb-3 border border-secondary rounded-pill borderInput" autocomplete="off"
           id="exampleInputPassword1" placeholder="Password" [(ngModel)]="user.password" name="password">
       </div>
     </form>
@@ -28,11 +28,11 @@
 
 
 <section class="col">
-  <div class="mx-auto d-block text-center mb-3 col-sm-8">
-    <button type="button" class="btn btn-primary" style="width: 20%">Log me in</button><!-- routerLink="/home" (click)="LogIn()"-->
+  <div class="mx-auto d-block text-center mb-3 ">
+    <button type="button" class="btn btn-primary" style="width: 20%" (click)="LogIn()">Log me in</button><!-- routerLink="/home" -->
   </div>
-  <div class="mx-auto d-block text-center mb-3 col-sm-8">
-    <button type="button" class="btn btn-primary btnGoogle" style="width: 20%" (click)="LogInGoogle()">Log in with<img src="../../../assets/google.png" alt="Icon google" class="googleIcon"></button>
+  <div class="mx-auto d-block text-center mb-3 ">
+    <button type="button" class="btn btn-primary btnGoogle" style="width: 20%" (click)="LogInGoogle()">Log in with  <img src="../../../assets/google.png" alt="Icon google" class="googleIcon"></button>
   </div>
   <div class="mx-auto d-block text-center">
     <span><a href="#/register" id="linkRegister" class="link mx-auto d-block col-sm-6 fs-4" routerLink="/SignUp">Sign up now!</a></span>
