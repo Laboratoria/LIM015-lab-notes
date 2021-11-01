@@ -8,10 +8,10 @@
 
 <!-- <h2 class="text-center fs-1"> Bitzy Notes</h2> -->
 
-<section class="row mx-auto container">
-  <section class="col-sm-6 mx-auto d-block mt-3">
+<section class="row mx-auto container mb-2">
+  <section class="col-sm-8 mx-auto d-block mt-3">
 
-    <form class="col form-group">
+    <form class="col form-group custom-form">
 
       <div class="form-group">
         <label for="exampleInputNamel1" class="text fs-5">Name</label>
@@ -37,14 +37,15 @@
           id="exampleInputPassword1" placeholder="Password">
       </div>
 
+      <section class="col">
+        <div class="mx-auto d-block text-center mb-1 col-sm-8">
+          <button type="button" class="btn btn-primary fs-4" style="width: 50%"  (click)="register()">Sign up</button><!-- routerLink="/home"-->
+        </div>
+      </section>
+
     </form>
 
   </section>
 </section>
 
 
-<section class="col">
-  <div class="mx-auto d-block text-center mb-3 col-sm-8">
-    <button type="button" class="btn btn-primary" style="width: 20%"  (click)="register()">Register</button><!-- routerLink="/home"-->
-  </div>
-</section>

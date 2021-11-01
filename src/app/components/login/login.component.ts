@@ -22,10 +22,10 @@ export class LoginComponent implements OnInit {
   }
 
   LogIn(){
-    console.log(this.user);
+    // console.log(this.user);
     const {email, password} = this.user;
-    this.authService.login(email, password).then(res =>{
-      console.log(res);
+    this.authService.login(email, password).then(userCredential =>{
+      console.log(userCredential);
       // this.router.navigateByUrl('/home');
     }).catch((error) => {
       // this.router.navigateByUrl('/login');
