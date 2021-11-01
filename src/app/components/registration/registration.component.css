@@ -1,0 +1,22 @@
+.logo-home{
+  height: 25vh;
+}
+
+/* .form-control-inline {
+  min-width: 0;
+  width: 400px !important;
+} */
+
+.text{
+  color: var(--color-main);
+  font-family: var( --font-main);
+}
+
+.borderInput{
+  border: 3px solid var(--color-main)!important;
+  background-color: var(--color-light) !important;
+}
+
+.btn{
+  font-family: var( --font-main);
+}

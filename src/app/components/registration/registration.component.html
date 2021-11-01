@@ -1,0 +1,50 @@
+<!-- <p>registration works!</p> -->
+<!-- <p>login works!</p> -->
+<section class="mt-5">
+  <figure>
+    <img src="../../../assets/logo.png" alt="Icon logo" class="logo-home mx-auto d-block" routerLink="/login">
+  </figure>
+</section>
+
+<!-- <h2 class="text-center fs-1"> Bitzy Notes</h2> -->
+
+<section class="row mx-auto container">
+  <section class="col-sm-6 mx-auto d-block mt-3">
+
+    <form class="col form-group">
+
+      <div class="form-group">
+        <label for="exampleInputNamel1" class="text fs-5">Name</label>
+        <input type="text" class="form-control mb-3 border border-secondary rounded-pill borderInput"
+          id="exampleInputName1" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="user.name" name="name">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1" class="text fs-5">Email</label>
+        <input type="email" class="form-control mb-3 border border-secondary rounded-pill borderInput"
+          id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="user.email" name="email">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1" class="fs-5 text">Password</label>
+        <input type="password" class="form-control mb-3 border border-secondary rounded-pill borderInput"
+          id="exampleInputPassword1" placeholder="Password" [(ngModel)]="user.password" name="password">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1" class="fs-5 text">Confirm Password</label>
+        <input type="password" class="form-control mb-3 border border-secondary rounded-pill borderInput"
+          id="exampleInputPassword1" placeholder="Password">
+      </div>
+
+    </form>
+
+  </section>
+</section>
+
+
+<section class="col">
+  <div class="mx-auto d-block text-center mb-3 col-sm-8">
+    <button type="button" class="btn btn-primary" style="width: 20%"  (click)="register()">Register</button><!-- routerLink="/home"-->
+  </div>
+</section>
