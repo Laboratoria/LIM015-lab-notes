@@ -25,16 +25,21 @@ export class LoginComponent implements OnInit {
     console.log(this.user);
     const {email, password} = this.user;
     this.authService.login(email, password).then(res =>{
-      console.log('Create user succesfull', res);
-      this.router.navigateByUrl('/home');
+      console.log(res);
+      // this.router.navigateByUrl('/home');
+    }).catch((error) => {
+      // this.router.navigateByUrl('/login');
+      console.log(error);
     })
   }
 
   LogInGoogle(){
-    this.authService.loginWithGoogle().then((userCredential:any) => {
+    this.authService.loginWithGoogle().then((userCredential) => {
       // console.log('userCredential--->',userCredential); //see userCredential.aditionalUserInfo
-      console.log(userCredential.additionalUserInfo.profile);
+      console.log(userCredential.additionalUserInfo);
       this.router.navigateByUrl('/home');
+    }).catch((error) => {
+      console.log(error);
     })
   }
 
