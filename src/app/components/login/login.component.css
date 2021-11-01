@@ -1,11 +1,10 @@
+*{
+  font-family: var( --font-main);
+}
+
 .logo-home{
   height: 35vh;
 }
-
-/* .form-control-inline {
-  min-width: 0;
-  width: 400px !important;
-} */
 
 .text{
   color: var(--color-main);
@@ -24,10 +23,20 @@
 .btnGoogle{
   background-color:  var(--color-main)!important;
 }
-/* .google{
-  margin-left: 10px;
-} */
 
 .googleIcon{
   height: 15px;
+}
+
+.custom-form {
+  /* min-width: 300px;
+  max-width: 60%; */
+  /* margin: 0px auto; */
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2rem 3rem;
+  /* margin: auto; */
+  border-radius: 2.5rem;
+  background-color: #ecf0f3;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+  /* color: black; */
 }
