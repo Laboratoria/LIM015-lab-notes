@@ -81,9 +81,9 @@ export class AuthService {
     // })
   }
 
-  // getUserActive(){
-  //   return this. afAuth.authState;
-  // }
+  getUserActive(){
+    return firebase.auth().currentUser?.uid;
+  }
 
   logout(){
     this.afAuth.signOut().then(() => {
@@ -106,4 +106,5 @@ export class AuthService {
       }
     })
   }
+
 }

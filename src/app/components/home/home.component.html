@@ -28,7 +28,8 @@
   <!-- Section to display notes -->
 
 <section class="mx-auto container row mt-3">
-  <section *ngFor="let note of notes" class="col-sm-6">
+  <!-- <section *ngFor="let note of notes" class="col-sm-6"> -->
+  <section *ngFor="let note of userNotes" class="col-sm-6">
     <div class="card text-dark bg-light mb-3">
       <div class="card-header">
         <h5 class="card-title">{{ note.title }}</h5>

@@ -9,18 +9,26 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 })
 export class HomeComponent implements OnInit {
   notes: any[] = [];
-
-  constructor(private authService: AuthService,
-              private firestoreService: FirestoreService,) { }
-
+  userNotes: any[] = [];
   newNote={
     title: '',
     content: '',
   }
+  userUID: string | any;
+
+  constructor(private authService: AuthService,
+              private firestoreService: FirestoreService,) { }
+
 
   ngOnInit(): void {
     this.authService.userNotLogged();
     this.getUserNotes();
+    this.getUid();
+  }
+
+  getUid() {
+    // this.authService.currentUser.uid;
+    this.userUID = this.authService.getUserActive();
   }
 
   logOut(){
@@ -42,9 +50,14 @@ export class HomeComponent implements OnInit {
           ...element.payload.doc.data(),
         })
       });
-      // this.productsFilter = this.getBreakfastItem();
       console.log(this.notes);
+      this.userNotes = this.getFilterNotes();
+
     });
+  }
+
+  getFilterNotes() {
+    return this.notes.filter((item) => item.idUser == this.userUID);
   }
 
   saveNote(){
@@ -52,4 +65,5 @@ export class HomeComponent implements OnInit {
     console.log('Note saved');
     console.log(this.newNote);
   }
+
 }
