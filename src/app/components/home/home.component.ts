@@ -9,12 +9,13 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 })
 export class HomeComponent implements OnInit {
   notes: any[] = [];
-  userNotes: any[] = [];
+  userNotes: any;
   newNote={
     title: '',
     content: '',
   }
   userUID: string | any;
+  localUid: any = '';
 
   constructor(private authService: AuthService,
               private firestoreService: FirestoreService,) { }
@@ -24,6 +25,7 @@ export class HomeComponent implements OnInit {
     this.authService.userNotLogged();
     this.getUserNotes();
     this.getUid();
+    this.localUid = localStorage.getItem('localUid');
   }
 
   getUid() {
@@ -32,13 +34,13 @@ export class HomeComponent implements OnInit {
   }
 
   logOut(){
+    window.localStorage.removeItem('localUid');
     this.authService.logout();
     console.log('adioj');
   }
 
   addNote(){
     console.log('Holii');
-     // Trae el listado de productos
   }
 
   getUserNotes(){
@@ -51,13 +53,16 @@ export class HomeComponent implements OnInit {
         })
       });
       console.log(this.notes);
-      this.userNotes = this.getFilterNotes();
+      this.userNotes = this.getFilteredNotes();
 
     });
   }
 
-  getFilterNotes() {
-    return this.notes.filter((item) => item.idUser == this.userUID);
+  getFilteredNotes() {
+    if (this.localUid === this.userUID){
+      return this.notes.filter((item) => item.idUser === this.userUID);
+    }
+    else return this.notes.filter((item) => item.idUser === this.localUid);
   }
 
   saveNote(){

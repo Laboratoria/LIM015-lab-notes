@@ -8,6 +8,7 @@ import { AngularFirestoreDocument } from '@angular/fire/compat/firestore';
   providedIn: 'root'
 })
 export class AuthService {
+  localuid: any | undefined = '';
 
   constructor(private afAuth: AngularFireAuth,
               public router: Router) { }
@@ -26,7 +27,9 @@ export class AuthService {
   login(email:string, password:string){
     return this.afAuth.signInWithEmailAndPassword(email, password)
       .then((result) => {
-        console.log(result.user);
+        console.log(result.user?.uid);
+        this.localuid = result.user?.uid;
+        localStorage.setItem('localUid', this.localuid)
         this.router.navigate(['/home']);
       }).catch((error) => {
         window.alert(error.message)
