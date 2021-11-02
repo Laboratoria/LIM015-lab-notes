@@ -19,6 +19,8 @@ export class LoginComponent implements OnInit {
     this.authService.userlogged();
   }
 
+  localuid: any | undefined = '';
+
   user={
     email: '',
     password: '',
@@ -38,8 +40,11 @@ export class LoginComponent implements OnInit {
 
   LogInGoogle(){
     this.authService.loginWithGoogle().then((userCredential: any) => {
-      // console.log('userCredential--->',userCredential); //see userCredential.aditionalUserInfo
-      console.log(userCredential.additionalUserInfo.profile);
+      // console.log('userCredential--->',userCredential.user.uid); //see userCredential.aditionalUserInfo
+      // console.log(userCredential.additionalUserInfo.profile);
+      // console.log(userCredential.user?.uid);
+      this.localuid = userCredential.user?.uid;
+      localStorage.setItem('localUid', this.localuid)
       const newUser = userCredential.additionalUserInfo?.isNewUser;
       if (newUser) {
         const idUser = userCredential.user.uid;
