@@ -1,17 +1,18 @@
-// import { initializeApp } from 'firebase/app';
-// import * as firebase from "firebase/app";
-// import 'firebase/auth';
-  
-// const firebaseConfig = {
-//   apiKey: "AIzaSyAYTa2hpAtBRDnQ3IkhhWl5D8vdb9Lt1Pk",
-//   authDomain: "notitas-57023.firebaseapp.com",
-//   projectId: "notitas-57023",
-//   storageBucket: "notitas-57023.appspot.com",
-//   messagingSenderId: "336545729678",
-//   appId: "1:336545729678:web:f286e58c02638b37b40ddf",
-//   measurementId: "G-E4G9PK2MFD"
-// };
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
-// firebase.initializeApp(firebaseConfig);
-// export default firebase;
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECTID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_FIREBASE_APPID
+};
 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+export default db;
