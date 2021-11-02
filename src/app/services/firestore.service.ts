@@ -17,4 +17,8 @@ export class FirestoreService {
   saveInfoUser(info: any) {
     return this.firestore.collection('users').add(info);
   }
+
+  getNotes(): Observable<any> {
+    return this.firestore.collection('userNotes').snapshotChanges();
+  }
 }
