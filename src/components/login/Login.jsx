@@ -1,22 +1,61 @@
-import React, { useState } from "react";
+import React from "react";
 import '../login/login.css'
 import { useForm } from "react-hook-form";
 import logoDos from "../../img/logo2.png";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import "../../firebase/firebaseConfig";
+import { useHistory } from "react-router-dom";
+import { Icon } from '@iconify/react';
 
+const useInformation = () => {
+  const auth = getAuth();
+  const user = auth.currentUser;
+  let name; let email; let photoUrl; let uid; let
+    emailVerified;
+
+  if (user != null) {
+    name = user.displayName;
+    email = user.email;
+    photoUrl = user.photoURL;
+    emailVerified = user.emailVerified;
+    uid = user.uid;
+  }
+  return { user, name, email, photoUrl, uid, emailVerified }
+};
+
+// export default useInformation;
 
 
 const Header = () => {
   return (
-  <h1>Hola bebés</h1>
+    <button className='buttonLogout' type='submit'><Icon className='iconLogout' icon="mdi:logout" color="#FFFFFF" /></button>
+      
+    
   );
 };
 
 const Login = () => {
-  const [user] = useState(false);
+  // const [user] = useState(false);
   const { register, handleSubmit, formState: { errors } } = useForm();
+  const { user } = useInformation();
+  const history = useHistory();
   const onSubmit = data => {
-    console.log(data.email);
-    console.log(data.password);
+    // console.log(data.email);
+    // console.log(data.password);
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, data.email, data.password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user + 'Ya estás logueado');
+        history.push("/home");
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage)
+      });
   } 
 
   return (
