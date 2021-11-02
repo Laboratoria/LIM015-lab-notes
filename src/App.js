@@ -4,7 +4,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Notitas from './components/notitas/Notitas';
+import HomeNotitas from './pages/HomeNotitas';
 import NotFound from './components/notFound/NotFound';
 import Inicio from './pages/Inicio';
 
@@ -32,7 +32,7 @@ const App = () => {
             < Inicio/>
           </Route>
           <Route path="/home">
-            < Notitas />
+            < HomeNotitas />
           </Route>
           <Route component= {NotFound} />
         </Switch>
