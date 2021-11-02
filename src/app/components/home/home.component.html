@@ -1,26 +1,76 @@
-<header>
-  <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="#"><img src="../../../assets/icon.png" alt="Icon logo"
-        class="logo mx-auto d-block"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars fs-2"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link fs-4">My Notes</a>  <!--  href="/Notes" -->
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fs-4" (click)="logOut()">Log out</a> <!--routerLink="/Home" -->
-        </li>
-      </ul>
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#"><img src="../../../assets/icon.png" alt="Icon logo" class="logo mx-auto d-block"/></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars fs-2"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link fs-4">My Notes</a>
+        <!--  href="/Notes" -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fs-4" (click)="logOut()">Log out</a>
+        <!--routerLink="/Home" -->
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- <p>home works!</p> -->
+<section class="mx-auto d-block text-center mb-3 mt-3">
+  <button type="button" class="btn btn-primary btnPlus float-end me-5 mb-3" data-toggle="modal" data-target="#basicModal">
+    <!--(click)="addNote()" -->
+    <i class="fas fa-plus fs-3"></i>
+  </button>
+</section>
+
+  <!-- Section to display notes -->
+
+<section class="mx-auto container row mt-3">
+  <section *ngFor="let note of notes" class="col-sm-6">
+    <div class="card text-dark bg-light mb-3">
+      <div class="card-header">
+        <h5 class="card-title">{{ note.title }}</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-text text-dark">{{ note.content }}</p>
+        <p class="card-text text-dark">{{ note.date }}</p>
+      </div>
     </div>
-  </nav>
-</header>
+  </section>
+</section>
 
-<body>
-  <p>home works!</p>
-</body>
+  <!-- Modal -->
+<section class="mx-auto d-block text-center">
+  <div class="modal fade mt-5" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content mt-5 col-sm-6" style="width: 300px;">
+        <div class="modal-header bg-light">
+          <!-- <h4 class="modal-title text-dark" id="myModalLabel">Basic Modal</h4> -->
+          <div class="md-form text-dark">
+            <p class="text-dark">Title</p>
+            <input type="text" id="form102" class="form-control text-dark" [(ngModel)]="newNote.title" name="title">
+          </div>
+          <button type="button" class="close btn btn-primary btnPlus" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times fs-5"></i>
+          </button>
+        </div>
+        <div class="modal-body text-dark">
+          <!-- <h3 class="text-dark">Modal Body</h3> -->
+          <div class="md-form">
+            <textarea id="form103" class="md-textarea form-control text-dark" placeholder="Write something here..." [(ngModel)]="newNote.content" name="content"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default text-dark" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="saveNote()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<footer class="text-center mt-3 fs-5 fixed-bottom"><p class="mt-1">© 2021 - Best footer ever!</p></footer>
+<footer class="text-center mt-3 fs-5 fixed-bottom">
+  <p class="mt-1">© 2021 - Best footer ever!</p>
+</footer>

@@ -1,12 +1,13 @@
 *{
   margin: 0;
+  color: white;
   /* padding: 0; */
 }
-header{
+/* HEADER */
+nav{
   background-color: var(--color-main);
-  height: 10vh;
+  /* height: 10vh; */
   font-family: var(--font-main);
-  color: white;
 }
 .logo{
   height: 7vh;
@@ -19,16 +20,10 @@ header{
 .navbar-toggler:focus{
   box-shadow: none;
 }
-.fa-bars{
-  color: white;
-  /* font-size: 30px; */
-}
 .navbar-nav{
   align-items: center;
-  background-color: var(--color-main);
 }
 a {
-  color: white;
   margin-right: 1rem;
   cursor: pointer;
 }
@@ -45,10 +40,26 @@ a {
 body{
   height: 85vh;
 }
+.btnPlus{
+  background-color:  var(--color-main)!important;
+}
+.card-header{
+  background-color:  var(--color-main)!important;
+}
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.shadow-textarea textarea.form-control::placeholder {
+  font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+  padding-left: 0.8rem;
+}
 
 footer{
   background-color: var(--color-main);
   font-family: var(--font-main);
-  color: white;
   height: 5vh;
 }
