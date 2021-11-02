@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../components/notitas/notitas.css'
 
-
 const Notitas = () => {
   return (
     <section className='content'>
