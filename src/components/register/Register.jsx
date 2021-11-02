@@ -2,14 +2,32 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import '../register/register.css';
 import logo from "../../img/logo.png";
+import "../../firebase/firebaseConfig";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { useHistory } from "react-router-dom";
 
 function Register() {
-
   const { register, handleSubmit, formState: { errors } } = useForm();
+  const history = useHistory();
   const onSubmit = data => {
-    console.log(data.name);
-    console.log(data.email);
-    console.log(data.password);
+    // console.log(data.name);
+    // console.log(data.email);
+    // console.log(data.password);
+    const auth = getAuth();
+    createUserWithEmailAndPassword(auth, data.email, data.password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user + 'Ya estás logueado');
+        history.push("/home");
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+        // ..
+      });
   };
 
   return (
