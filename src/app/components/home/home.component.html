@@ -35,7 +35,7 @@
         <button type="button" class="close btn btn-primary btnPlus float-end" data-dismiss="modal" aria-label="Close" (click)="deleteNote(note.id)">
           <i class="fas fa-trash"></i>
         </button>
-        <button type="button" class="close btn btn-primary btnPlus float-end" data-dismiss="modal" aria-label="Close" (click)="updateNote()" data-toggle="modal" data-target="#basicModal">
+        <button type="button" class="close btn btn-primary btnPlus float-end" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#basicModalUpdate" (click)="getIdNote(note.id, note.content)"><!-- (click)="updateNote()" -->
           <i class="fas fa-edit"></i>
         </button> </h5>
       </div>
@@ -77,6 +77,34 @@
   </div>
 </section>
 
+
+  <!-- Modal UPDATE NOTE-->
+    <section class="mx-auto d-block text-center">
+      <div class="modal fade mt-5" id="basicModalUpdate" tabindex="-1" role="dialog" aria-labelledby="basicModal"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content mt-5 col-sm-6" style="width: 300px;">
+            <div class="modal-header bg-light">
+              <div class="md-form text-dark">
+                <p class="text-dark">Edit your note c:</p>
+              </div>
+              <button type="button" class="close btn btn-primary btnPlus" data-dismiss="modal" aria-label="Close">
+                <i class="fas fa-times fs-5"></i>
+              </button>
+            </div>
+            <div class="modal-body text-dark">
+              <div class="md-form">
+                <textarea id="form103" class="md-textarea form-control text-dark" [(ngModel)]="update.content" name="contentUpdated"></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-default text-dark" data-dismiss="modal">Close</button> -->
+              <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="updateContent()">Update Note</button> <!--(click)="updateNote()" -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 <footer class="text-center mt-3 fs-5 fixed-bottom">
   <p class="mt-1">© 2021 - Best footer ever!</p>
