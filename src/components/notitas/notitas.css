@@ -4,20 +4,26 @@
   margin-top: 10%;
 }
 
-.contenteInputTitle {
-  width: 35%;
-  height: 80px;
-  background-color: #C4C4C4;
-  font-size: 1.2em;
+.contentNote {
+  background-color:#C4C4C4 ;
+  width: 40%;
   border-radius: 15px;
-  border: none;
 }
 
+/* .contenteInputTitle {
+  width: 100%;
+  height: 80px;
+  background-color: #C4C4C4;
+  
+  border-radius: 15px;
+  border: none;
+} */
+
 .notasTitle {
-  width: 35%;
+  width: 95%;
   height: 60px;
   background-color: #C4C4C4;
-  font-size: 1.2em;
+  font-size: 1.5em;
   border-radius: 15px;
   border: none;
   text-align: left;
@@ -26,20 +32,10 @@
   font-weight: bold;
 }
 
-.ContentTextArea{
-  margin-top: -2%;
-  width: 35%;
-  height: 250px;
-  font-size: 1.5em;
-  background-color: #C4C4C4;
-  border-radius: 15px;
-  border: none;
-}
-
 .notasTextArea {
-  width: 90%;
+  width: 95%;
   height: 230px;
-  font-size: 1em;
+  font-size: 1.2em;
   background-color: #C4C4C4;
   border-radius: 15px;
   border: none;
