@@ -21,4 +21,16 @@ export class FirestoreService {
   getNotes(): Observable<any> {
     return this.firestore.collection('userNotes').snapshotChanges();
   }
+
+  createNote(note: any){
+    return this.firestore.collection('userNotes').add(note);
+  }
+
+  updateNote(id: string, content:Object){
+    return this.firestore.collection('userNotes').doc(id).update(content);
+  }
+
+  deleteNote(id:string){
+    return this.firestore.collection('userNotes').doc(id).delete();
+  }
 }
