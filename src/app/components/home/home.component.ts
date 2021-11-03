@@ -14,12 +14,16 @@ export class HomeComponent implements OnInit {
     title: '',
     content: '',
   }
+  update={
+    content: '',
+    date: '',
+  }
   userUID: string | any;
   localUid: any = '';
+  idNote: string = '';
 
   constructor(private authService: AuthService,
               private firestoreService: FirestoreService,) { }
-
 
   ngOnInit(): void {
     this.authService.userNotLogged();
@@ -71,20 +75,25 @@ export class HomeComponent implements OnInit {
       content: content,
       date: newDate,
       idUser: this.localUid,
-      idNote: '',
+      // idNote: '',
     }
     this.newNote.title='';
     this.newNote.content='';
     this.firestoreService.createNote(saveNote);
   }
 
-  updateNote(){
-    const id = this.userNotes.id;
-    const content = this.userNotes.content;
-    // const idNote=this.notes.id;
-    // const statusTable=this.table.status;
-    // const objTable = {status:statusTable};
-    this.firestoreService.updateNote(id, content);
+  getIdNote(id: string, content: any){
+    console.log(id);
+    console.log(content);
+    return this.idNote = id;
+  }
+
+  updateContent() {
+    const contentNote = {content: this.update.content};
+    const id = this.idNote;
+    // console.log(contentNote);
+    // console.log(this.idNote);
+    this.firestoreService.updateNote(id, contentNote);
   }
 
   deleteNote(id:string){

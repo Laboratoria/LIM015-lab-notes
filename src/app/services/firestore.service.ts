@@ -26,7 +26,7 @@ export class FirestoreService {
     return this.firestore.collection('userNotes').add(note);
   }
 
-  updateNote(id: string, content:Object){
+  updateNote(id: string, content:object){
     return this.firestore.collection('userNotes').doc(id).update(content);
   }
 
