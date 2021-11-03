@@ -39,10 +39,6 @@ export class HomeComponent implements OnInit {
     console.log('adioj');
   }
 
-  addNote(){
-    console.log('Holii');
-  }
-
   getUserNotes(){
     this.firestoreService.getNotes().subscribe((data: any[]) => {
       this.notes = [];
@@ -54,7 +50,6 @@ export class HomeComponent implements OnInit {
       });
       console.log(this.notes);
       this.userNotes = this.getFilteredNotes();
-
     });
   }
 
@@ -65,10 +60,36 @@ export class HomeComponent implements OnInit {
     else return this.notes.filter((item) => item.idUser === this.localUid);
   }
 
-  saveNote(){
+  createNote(){
     const {title, content} = this.newNote;
     console.log('Note saved');
     console.log(this.newNote);
+    const date = new Date();
+    const newDate = date.toString();
+    const saveNote = {
+      title: title,
+      content: content,
+      date: newDate,
+      idUser: this.localUid,
+      idNote: '',
+    }
+    this.newNote.title='';
+    this.newNote.content='';
+    this.firestoreService.createNote(saveNote);
   }
 
+  updateNote(){
+    const id = this.userNotes.id;
+    const content = this.userNotes.content;
+    // const idNote=this.notes.id;
+    // const statusTable=this.table.status;
+    // const objTable = {status:statusTable};
+    this.firestoreService.updateNote(id, content);
+  }
+
+  deleteNote(id:string){
+    this.firestoreService.deleteNote(id);
+    console.log('Delete note');
+    // this.notes.id
+  }
 }

@@ -20,7 +20,6 @@
 <!-- <p>home works!</p> -->
 <section class="mx-auto d-block text-center mb-3 mt-3">
   <button type="button" class="btn btn-primary btnPlus float-end me-5 mb-3" data-toggle="modal" data-target="#basicModal">
-    <!--(click)="addNote()" -->
     <i class="fas fa-plus fs-3"></i>
   </button>
 </section>
@@ -32,17 +31,23 @@
   <section *ngFor="let note of userNotes" class="col-sm-6">
     <div class="card text-dark bg-light mb-3">
       <div class="card-header">
-        <h5 class="card-title">{{ note.title }}</h5>
+        <h5 class="card-title">{{ note.title }}
+        <button type="button" class="close btn btn-primary btnPlus float-end" data-dismiss="modal" aria-label="Close" (click)="deleteNote(note.id)">
+          <i class="fas fa-trash"></i>
+        </button>
+        <button type="button" class="close btn btn-primary btnPlus float-end" data-dismiss="modal" aria-label="Close" (click)="updateNote()" data-toggle="modal" data-target="#basicModal">
+          <i class="fas fa-edit"></i>
+        </button> </h5>
       </div>
       <div class="card-body">
         <p class="card-text text-dark">{{ note.content }}</p>
-        <p class="card-text text-dark">{{ note.date }}</p>
+        <p class="card-text text-dark">{{ note.date | date: 'dd/MM/yyyy' }}</p>
       </div>
     </div>
   </section>
 </section>
 
-  <!-- Modal -->
+  <!-- Modal CREATE NOTE-->
 <section class="mx-auto d-block text-center">
   <div class="modal fade mt-5" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
     <div class="modal-dialog">
@@ -65,12 +70,13 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default text-dark" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" (click)="saveNote()">Save changes</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="createNote()">Save changes</button>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <footer class="text-center mt-3 fs-5 fixed-bottom">
   <p class="mt-1">© 2021 - Best footer ever!</p>
