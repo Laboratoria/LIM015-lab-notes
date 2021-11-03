@@ -2,7 +2,7 @@ import React from "react";
 import '../login/login.css'
 import { useForm } from "react-hook-form";
 import logoDos from "../../img/logo2.png";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import "../../firebase/firebaseConfig";
 import { useHistory } from "react-router-dom";
 import { Icon } from '@iconify/react';
@@ -23,14 +23,18 @@ const useInformation = () => {
   return { user, name, email, photoUrl, uid, emailVerified }
 };
 
-// export default useInformation;
-
-
 const Header = () => {
+  const history = useHistory();
+  const auth = getAuth();
+  const logout = () => signOut(auth).then(() => {
+    history.push("/");
+    // Sign-out successful.
+  }).catch((error) => {
+    console.log(error);
+    // An error happened.
+  });
   return (
-    <button className='buttonLogout' type='submit'><Icon className='iconLogout' icon="mdi:logout" color="#FFFFFF" /></button>
-      
-    
+    <button className='buttonLogout' type='submit' onClick={() => logout()} ><Icon className='iconLogout' icon="mdi:logout" color="#FFFFFF" /></button>
   );
 };
 
