@@ -74,6 +74,10 @@ export class AuthService {
   }
   */
 
+  signIn(phoneNumber: string, applicationVerifier: any) {
+    return this.afAuth.signInWithPhoneNumber(phoneNumber, applicationVerifier)
+  }
+
   register(email:string, password:string){
     return this.afAuth.createUserWithEmailAndPassword(email, password)
     // .then((result) => {

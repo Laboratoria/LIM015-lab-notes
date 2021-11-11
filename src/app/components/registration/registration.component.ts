@@ -43,10 +43,13 @@ export class RegistrationComponent implements OnInit {
         };
         // guardo la info de la cuenta de google
         // this.firestoreService.saveInfoGoogle(infoUser);
-        this.router.navigate(['/login']);
+        // this.authService.userNotLogged();
+        // this.router.navigate(['/login']);
+        // this.router.navigateByUrl('/login');
         this.firestoreService.saveInfoUser(infoUser);
         console.log('Create user succesfull', userCredential)
       }
+      this.router.navigate(['/login']);
     });
   }
 }

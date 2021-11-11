@@ -14,64 +14,76 @@
       <div class="form-group">
         <label for="exampleInputEmail1" class="text fs-5">Email address</label>
         <input type="email" class="form-control mb-3 border border-secondary rounded-pill borderInput" autocomplete="on"
-          id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="user.email" name="email">
+          id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="user.email"
+          name="email">
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1" class="fs-5 text">Password</label>
-        <input type="password" class="form-control mb-3 border border-secondary rounded-pill borderInput" autocomplete="off"
-          id="exampleInputPassword1" placeholder="Password" [(ngModel)]="user.password" name="password">
+        <input type="password" class="form-control mb-3 border border-secondary rounded-pill borderInput"
+          autocomplete="off" id="exampleInputPassword1" placeholder="Password" [(ngModel)]="user.password"
+          name="password">
       </div>
 
       <section class="col mt-3">
         <div class="mx-auto d-block text-center mb-3">
-          <button type="button" class="btn btn-primary" style="width: 50%" (click)="LogIn()">Log me in</button><!-- routerLink="/home" -->
+          <button type="button" class="btn btn-primary" style="width: 50%" (click)="LogIn()">Log me in</button>
+          <!-- routerLink="/home" -->
         </div>
         <div class="mx-auto d-block text-center mb-3 ">
-          <button type="button" class="btn btn-primary btnGoogle" style="width: 50%" (click)="LogInGoogle()">Log in with  <img src="../../../assets/google.png" alt="Icon google" class="googleIcon"></button>
+          <button type="button" class="btn btn-primary btnGoogle" style="width: 50%" (click)="LogInGoogle()">Log in with
+            <img src="../../../assets/google.png" alt="Icon google" class="googleIcon"></button>
         </div>
         <div class="mx-auto d-block text-center">
-          <span>Don't have an account?<a href="#/register" id="linkRegister" class="link mx-auto d-block col-sm-6 fs-4" routerLink="/SignUp">Sign up now!</a></span>
+          <span>Don't have an account?<a href="#/register" id="linkRegister" class="link mx-auto d-block col-sm-6 fs-4"
+              routerLink="/SignUp">Sign up now!</a></span>
+        </div>
+      </section>
+
+      <section>
+        <div class="mx-auto d-block text-center mb-3">
+          <button type="button" class="btn btn-primary" style="width: 50%" data-toggle="modal"
+            data-target="#basicModal">Login with SMS</button>
+          <!--(click)="LogIn()" routerLink="/home" -->
         </div>
       </section>
     </form>
 
+    <section class="mx-auto d-block text-center">
+      <div class="modal fade mt-5" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content mt-5 col-sm-6" style="width: 500px;">
+            <div class="modal-header bg-light justify-content-between">
+              <div class="md-form text-dark">
+                <!-- <p class="text-dark ">Phone number:</p>-->
+                <label for="formPhone" class="text fs-5 col-sm-6 text-center" style="width: 100%">Please insert phone number and validation code:</label>
+                <!-- <input type="text" id="formPhone" class="form-control text-dark col-sm-6"> [(ngModel)]="newNote.title" name="title" -->
+              </div>
+              <div>
+                <button type="button" class="btn btn-danger col-sm-6 text-center text" data-dismiss="modal" style="width: 10%">X</button>
+              </div>
+            </div>
+            <div class="modal-body text-dark">
+              <div class="md-form text-dark row align-items-center">
+                <!-- <p class="text-dark ">Phone number:</p> -->
+                <label for="formPhone" class="text fs-5 col-sm-6" style="width: 30%">Phone number:</label>
+                <input type="text" id="formPhone" class="form-control text-dark col-sm-6" style="width: 70%" [(ngModel)]="user.phone" name="phone">
+              </div>
+              <div class="md-form text-dark row align-items-center">
+                <label for="formCode" class="text fs-5 col-sm-6" style="width: 30%">Validation code:</label>
+                <input type="text" id="formCode" class="form-control text-dark col-sm-6 mt-1" style="width: 70%" [(ngModel)]="user.code" name="code">
+                <!-- [(ngModel)]="newNote.title" name="title" -->
+              </div>
+            </div>
+            <div class="modal-footer row">
+              <button type="button" class="btn btn-primary col-sm-6" data-dismiss="modal" style="width: 30%" (click)="loginPhone()">Send Code</button>
+              <button type="button" class="btn  btn-primary col-sm-6 btnGoogle" data-dismiss="modal" style="width: 30%" (click)="validate()">Validate Code</button>
+              <!--(click)="createNote()" -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='sign-in-button'> </div>
+    </section>
+
   </section>
 </section>
-
-
-
-
-<!-- <section>
-  <div id="myModalReset" class="modal" style="display: none;">
-    <div class="modal-content">
-      <p>Email</p>
-      <input type="email"  class="inputType" id="emailReset" placeholder="user@example.com"/><br>
-      <span id = "errorReset" class="error"></span>
-      <div>
-        <button class = "button" id="btnSend">Send</button>
-        <button class = "button" id="btnCancelReset">Cancel</button>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- <i class="fab fa-google google"></i></button> -->
-<!-- <a href=""><i class="fab fa-google google"></i></a> -->
-
-
-<!-- <form class="formLogin">
-  <p class="fs-5 text">Email</p>
-  <input type="email"  class="mb-2" placeholder="user@example.com"/>
-  <span id="errorEmailLogin" class="error"></span><br>
-  <p class="fs-5">Password</p>
-  <input type="password"  class="inputType" id="passwordLogin" placeholder="Password" autocomplete="on"/>
-  <span id="errorpasswordLogin" class="error"></span><br>
-  <span id="errorAllLogin" class="error"></span><br>
-  <section class="buttonSection">
-    <a href="" class="linkResetPassword">forgot password?</a>
-    <button  class="button" id="btnLogin">Login</button>
-    <span id="msgSendEmail" class="successfully"></span><br>
-  </section>
-  <section class="sectionIcons">
-  <a href=""><i class="fab fa-google google"></i></a>
-  </section>
-</form>-->

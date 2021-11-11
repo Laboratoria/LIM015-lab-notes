@@ -39,6 +39,9 @@ export class HomeComponent implements OnInit {
 
   logOut(){
     window.localStorage.removeItem('localUid');
+    window.localStorage.removeItem('verificationId');
+    window.localStorage.removeItem('userPhone');
+    window.localStorage.removeItem('_grecaptcha');
     this.authService.logout();
     console.log('adioj');
   }

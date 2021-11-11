@@ -40,3 +40,19 @@
   box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
   /* color: black; */
 }
+
+.modal-footer{
+  margin: 0;
+}
+
+/* .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.shadow-textarea textarea.form-control::placeholder {
+  font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+  padding-left: 0.8rem;
+} */
